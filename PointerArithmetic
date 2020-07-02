@@ -1,0 +1,16 @@
+// Example program
+#include <iostream>
+#include <string>
+
+int main()
+{
+  double a = 4.5;
+  double *p;
+  p = &a;
+  
+  printf("%d \n", p);
+  printf("%d \n", p+2); 
+  printf("size of char is %d \n", sizeof(double)); //1 byte for char , 4 bytes for int, 8 bytes for double
+  printf("%f \n", *p);
+  printf("%f \n", *(p+1));
+}
