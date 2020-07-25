@@ -1,0 +1,21 @@
+// Character Arrays and pointers program
+#include <iostream>
+#include <string>
+#include <stdio.h>
+
+void print(char j[]) //interpreted as char* j (ptr to first elem)
+{
+ int i = 0;
+ while(j[i] != '\0') // can use *(j+i) instead of j[i] or even just *J and incement that instead of i
+ {
+     printf("%c", j[i]); // can use *(j+i) instead of j[i] or even just *J and incement that instead of i
+     i++;
+ }
+ printf("\n");
+}
+
+int main()
+{
+    char J[5]  = "JOHN";
+    print(J);
+}
