@@ -1,0 +1,24 @@
+// Function pointers in C/C++
+#include <stdio.h>
+#include <stdlib.h>
+int add(int a, int b)
+{
+    int c= 0;
+    c= a+b;
+    return c;
+}
+void print(char *name)
+{
+    printf("Hello %s\n", name);
+}
+int main()
+{
+    int (*p)(int, int); //function pointer to func returning int by taking two int params.
+    p = &add; //storing addr pf func in ptr
+    int c = (*p)(2,3); //calling func by dereferencing ptr
+    printf("the value of add is: %d\n", c); 
+    
+    void (*ptr)(char*); //function ptr to func which returns void. taking in ptr to char/string.
+    ptr = print; // storing address of func to ptr. diff syntax.
+    ptr("vastav"); //calling func by dereferencing ptr (diff syntax than above.)
+}
